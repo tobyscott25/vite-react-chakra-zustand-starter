@@ -1,0 +1,9 @@
+{
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"editor.bracketPairColorization.enabled": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	}
+}
