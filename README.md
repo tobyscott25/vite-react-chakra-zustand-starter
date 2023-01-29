@@ -1,4 +1,4 @@
-# Project boiletplate: TypeScript / React / ChakraUI / Zustand / ESLint / Prettier
+# Project boiletplate: TypeScript + React + ChakraUI + Zustand + ESLint/Prettier
 
 | Requirement       | Choice                                        |
 | ----------------- | --------------------------------------------- |
