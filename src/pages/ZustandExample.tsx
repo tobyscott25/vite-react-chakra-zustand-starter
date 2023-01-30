@@ -1,53 +1,17 @@
 import { FunctionComponent, ReactElement } from 'react'
-import {
-	TableContainer,
-	Table,
-	Thead,
-	Tbody,
-	Tfoot,
-	Tr,
-	Th,
-	Td,
-} from '@chakra-ui/react'
+import { Button, Text, Code } from '@chakra-ui/react'
+import { useCounterStore } from '../stores/counterStore'
 
 export const ZustandExample: FunctionComponent = (): ReactElement => {
+	const incrementCount = useCounterStore((state) => state.incrementCount)
 	return (
 		<>
-			<TableContainer>
-				<Table size="sm">
-					<Thead>
-						<Tr>
-							<Th>To convert</Th>
-							<Th>into</Th>
-							<Th isNumeric>multiply by</Th>
-						</Tr>
-					</Thead>
-					<Tbody>
-						<Tr>
-							<Td>inches</Td>
-							<Td>millimetres (mm)</Td>
-							<Td isNumeric>25.4</Td>
-						</Tr>
-						<Tr>
-							<Td>feet</Td>
-							<Td>centimetres (cm)</Td>
-							<Td isNumeric>30.48</Td>
-						</Tr>
-						<Tr>
-							<Td>yards</Td>
-							<Td>metres (m)</Td>
-							<Td isNumeric>0.91444</Td>
-						</Tr>
-					</Tbody>
-					<Tfoot>
-						<Tr>
-							<Th>To convert</Th>
-							<Th>into</Th>
-							<Th isNumeric>multiply by</Th>
-						</Tr>
-					</Tfoot>
-				</Table>
-			</TableContainer>
+			<Text my={5}>
+				Click the button to increment <Code>count</Code> in the Zustand{' '}
+				<Code>counterStore</Code>.
+			</Text>
+
+			<Button onClick={incrementCount}>Increment Count</Button>
 		</>
 	)
 }
