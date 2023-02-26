@@ -38,6 +38,7 @@ export const NavBar: FunctionComponent = (): ReactElement => {
 			</Box>
 
 			<Flex alignItems={'center'} justifyContent={'space-between'}>
+				<Text mr={10}>{process.env.REACT_APP_EXAMPLE_ENV_VAR}</Text>
 				<Text>Count: {count}</Text>
 				<ColorModeSwitcher justifySelf="flex-end" />
 			</Flex>

@@ -25,7 +25,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:sit": "sh -ac '. .env.sit; react-scripts start'",
+    "start:stg": "sh -ac '. .env.stg; react-scripts start'",
+    "start:prd": "sh -ac '. .env.prd; react-scripts start'",
     "build": "react-scripts build",
+    "build:sit": "sh -ac '. .env.sit; react-scripts build'",
+    "build:stg": "sh -ac '. .env.stg; react-scripts build'",
+    "build:prd": "sh -ac '. .env.prd; react-scripts build'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
