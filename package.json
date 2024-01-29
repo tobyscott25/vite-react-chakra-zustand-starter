@@ -1,5 +1,6 @@
 {
-  "name": "react-chakra-zustand-boilerplate",
+  "name": "vite-react-chakra-zustand-boilerplate",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,31 +10,26 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^28.1.8",
-    "@types/node": "^12.20.55",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "framer-motion": "^6.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.11.0",
     "react-router-dom": "^6.8.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^4.3.1",
     "web-vitals": "^2.1.4",
-    "zustand": "^4.3.2"
+    "zustand": "^4.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "start:sit": "sh -ac '. .env.sit; react-scripts start'",
-    "start:stg": "sh -ac '. .env.stg; react-scripts start'",
-    "start:prd": "sh -ac '. .env.prd; react-scripts start'",
-    "build": "react-scripts build",
-    "build:sit": "sh -ac '. .env.sit; react-scripts build'",
-    "build:stg": "sh -ac '. .env.stg; react-scripts build'",
-    "build:prd": "sh -ac '. .env.prd; react-scripts build'",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage --watch=false"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,12 +47,19 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.10",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
+    "@vitest/coverage-v8": "^1.2.2",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.1",
-    "prettier": "^2.8.3"
+    "jsdom": "^24.0.0",
+    "prettier": "^2.8.3",
+    "vitest": "^1.2.2"
   }
 }
