@@ -7,21 +7,11 @@ export default defineConfig({
 	base: '/',
 	plugins: [react(), viteTsconfigPaths()],
 	server: {
-		// this ensures that the browser opens upon server start
-		open: true,
-		// this sets a default port to 3000
+		open: true, // Open the browser when the dev server starts
 		port: 3000,
 	},
 	test: {
 		globals: true,
 		environment: 'jsdom',
-		setupFiles: './src/setupTests.ts',
-		css: true,
-		reporters: ['verbose'],
-		coverage: {
-			reporter: ['text', 'json', 'html'],
-			include: ['src/**/*'],
-			exclude: [],
-		},
 	},
 })
