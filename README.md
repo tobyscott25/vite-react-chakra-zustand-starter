@@ -1,3 +1,6 @@
+<img src="public/vite.svg" width="100px" />
+<img src="src/assets/chakra.svg" width="100px" />
+
 # Project boilerplate: TypeScript + React + ChakraUI + Zustand + ESLint/Prettier
 
 | Requirement       | Choice                                        |
